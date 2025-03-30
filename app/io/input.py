@@ -16,7 +16,7 @@ def read_text_with_pandas(filepath):
     """Функція для зчитування текстових даних з файлу за допомогою pandas."""
     try:
         df = pd.read_csv(filepath, encoding="utf-8")
-        return df.to_string()  # Перетворюємо DataFrame у текст
+        return df.to_string()
     except FileNotFoundError:
         return f"Файл {filepath} не знайдено."
     except pd.errors.EmptyDataError:
